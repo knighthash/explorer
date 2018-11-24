@@ -69,7 +69,8 @@
     "youtube": false,
     "search": true,
     "movement": true,
-    "network": true
+    "network": true,
+    "hive": true
   },
 
   // index page (valid options for difficulty are POW, POS or Hybrid)
@@ -116,7 +117,7 @@
   },
 
   // twitter, facebook, googleplus, youtube
-  "twitter": "iquidus",
+  "twitter": "litecoincash",
   "facebook": "yourfacebookpage",
   "googleplus": "yourgooglepluspage",
   "youtube": "youryoutubechannel",

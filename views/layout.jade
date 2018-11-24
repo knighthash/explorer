@@ -95,6 +95,11 @@ html
               a.navbar-link(href='/') 
                 span.glyphicon.glyphicon-search
                 span.menu-text #{settings.locale.menu_explorer}
+            if settings.display.hive == true
+              li#hive
+                a.navbar-link(href='/hive')
+                  span.fa.fa-forumbee
+                  span.menu-text #{settings.locale.menu_hive}
             if settings.heavy == true
               li#reward
                 a.navbar-link(href='/reward')
