@@ -42,7 +42,7 @@
     "block_genesis": "GENESIS",
 
     // global
-    "difficulty": "Difficulty",
+    "difficulty": "PoW Difficulty",
     "network": "Network",
     "height": "Height",
     "timestamp": "Timestamp",

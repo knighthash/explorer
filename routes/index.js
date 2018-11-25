@@ -130,6 +130,11 @@ router.get('/info', function(req, res) {
   res.render('info', { active: 'info', address: settings.address, hashes: settings.api });
 });
 
+router.get('/hive', function(req, res) {
+  res.render('hive', { active: 'hive', address: settings.address, hashes: settings.api });
+});
+
+
 router.get('/markets/:market', function(req, res) {
   var market = req.params['market'];
   if (settings.markets.enabled.indexOf(market) != -1) {
