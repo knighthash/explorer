@@ -58,7 +58,7 @@ html
             $("#honeypot").text(data.honey_pot);
             $("#immature_bct_count").text(data.immature_bct_count);
             $("#mature_bct_count").text(data.mature_bct_count);
-            $("#gashi_index").text(((data.mature_bee_count) / 20160000) * 100); 
+            $("#gashi_index").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2)); 
           }});
         }
 
