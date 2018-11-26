@@ -313,7 +313,8 @@ router.get('/ext/summary', function(req, res) {
               hashrate: hashrate,
               lastPrice: stats.last_price,
               connections: connections,
-              blockcount: blockcount
+              blockcount: blockcount,
+              gethivedifficulty: gethivedifficulty
             }]});
           });
         });

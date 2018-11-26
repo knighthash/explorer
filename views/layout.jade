@@ -28,14 +28,41 @@ html
           $.ajax({url: '/ext/summary', success: function(json){
             $("#supply").text(json.data[0].supply);
             $("#difficulty").text(json.data[0].difficulty);
+            $("#difficulty1").text(json.data[0].difficulty);
             $("#difficultyHybrid").text(json.data[0].difficultyHybrid);
             $("#hashrate").text(json.data[0].hashrate);
             $("#lastPrice").text(json.data[0].lastPrice.toFixed(8));
             $("#lblConnections").text(json.data[0].connections + ' connections');
             $("#lblBlockcount").text(json.data[0].blockcount + ' blocks');
             $("#lblX1").text(' ');
+            $("#gethivedifficulty1").text(json.data[0].gethivedifficulty);
+            $("#getbeecost1").text(json.data[0].getbeecost);
           }});
         }
+       function update_hive_diff(){   
+          $.ajax({url: '/api/gethivedifficulty', success: function(data){
+            $("#gethivedifficulty").text(data); 
+          }});
+        }
+
+       function update_bee_cost(){   
+         $.ajax({url: '/api/getbeecost', success: function(data){
+           $("#getbeecost").text(data); 
+          }});
+        }
+
+       function update_hive(){   
+          $.ajax({url: '/api/getnetworkhiveinfo', success: function(data){
+            $("#immature_bee_count").text(data.immature_bee_count);
+            $("#mature_bee_count").text(data.mature_bee_count);
+            $("#honeypot").text(data.honey_pot);
+            $("#immature_bct_count").text(data.immature_bct_count);
+            $("#mature_bct_count").text(data.mature_bct_count);
+            $("#gashi_index").text(((data.mature_bee_count) / 20160000) * 100); 
+          }});
+        }
+
+
         $('.block-last-next').tooltip({
           animation: true,
           delay: { hide: 500 },   
@@ -53,6 +80,9 @@ html
           update_stats();
         }, 60000);
         update_stats();
+        update_hive_diff();
+        update_bee_cost();
+        update_hive();
       });
   body
     - function format_unixtime(unixtime) {
@@ -170,7 +200,7 @@ html
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              strong #{settings.locale.ex_supply} (#{settings.symbol})
+              strong #{settings.locale.ex_supply} #{settings.symbol}
             .panel-body
               if settings.index.difficulty == 'Hybrid'
                label#supply - 
