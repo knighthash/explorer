@@ -20,13 +20,14 @@ html
     script(src='//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js')  
     script(src='//cdn.datatables.net/responsive/1.0.1/js/dataTables.responsive.js')
     script(src='//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js')
     script(src='/javascripts/chart.js')
     script.
       $(document).ready(function(){
         $('##{active}').addClass('active');
         function update_stats(){   
           $.ajax({url: '/ext/summary', success: function(json){
-            $("#supply").text(json.data[0].supply);
+            $("#supply").text(numeral(json.data[0].supply.toFixed()).format(0,0));
             $("#difficulty").text(json.data[0].difficulty);
             $("#difficulty1").text(json.data[0].difficulty);
             $("#difficultyHybrid").text(json.data[0].difficultyHybrid);
