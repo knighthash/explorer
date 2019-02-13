@@ -59,7 +59,8 @@ html
             $("#honeypot").text((data.honey_pot) / 10000000);
             $("#immature_bct_count").text(data.immature_bct_count);
             $("#mature_bct_count").text(data.mature_bct_count);
-            $("#gashi_index").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2)); 
+            $("#gashi_index").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2));
+            $("#gashi_index_stat").text((((data.mature_bee_count) / 20160000) * 100).toFixed(2)); 
           }});
         }
 
@@ -212,14 +213,10 @@ html
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
-              strong #{settings.markets.exchange} Price
+              strong Global Index
             .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#lastPrice -
-               <br>
-               label#lblX1
-              else
-               label#lastPrice - 
+               label#gashi_index_stat -
+ 
                  
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')      
@@ -251,12 +248,6 @@ html
                 span.glyphicon.fa.fa-youtube
      .col-md-4
         ul.nav
-          li.text-center(style='margin-left:80px;margin-right:80px;')
+          li.text-left(style='margin-left:80px;margin-right:80px;')
             p(style='margin-top:15px;') 
-              a.navbar-link(href='https://github.com/iquidus/explorer', target='_blank') Powered by Iquidus Explorer 
-      span.connections
-        label#lblBlockcount.label.label-default -
-        label#lblConnections.label.label-default -
-
-
-              
+a.navbar-link(href='https://github.com/iquidus/explorer', target='_blank') Powered by Iquidus Explorer & Knighthash   

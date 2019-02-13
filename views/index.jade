@@ -63,6 +63,10 @@ block content
         stable.api().ajax.reload(null, false);
       }, 60000 );
     });
+  .col-md-12
+    html
+      body
+        include cmc.html
   .row
     .col-md-12
       if error !== null        
@@ -87,6 +91,4 @@ block content
             th.text-center #{settings.locale.mkt_amount} (#{settings.symbol})
             th.text-center #{settings.locale.timestamp}
         tbody.text-center
-    .footer-padding
-      
-              
+.footer-padding
