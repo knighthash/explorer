@@ -5,28 +5,28 @@
 */
 {
   // name your instance!
-  "title": "Litecoin Cash (Hive-TestNet)",
+  "title": "Ring (TestNet)",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "LitecoinCash",
+  "coin": "Ring",
 
   // coin symbol
-  "symbol": "LCC",
+  "symbol": "tRNG",
 
   // logo
   "logo": "/images/logo.png",
 
   // favicon
-  "favicon": "public/favicon.ico",
+  "favicon": "public/favicon.png",
 
   // Uses bootswatch themes (http://bootswatch.com/)
   // Valid options:
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Cosmo",
+  "theme": "Cyborg",
 
   // port to listen for requests on.
   "port" : 3001,
@@ -60,7 +60,7 @@
 
   // menu settings
   "display": {
-    "api": true,
+    "api": false,
     "markets": false,
     "richlist": true,
     "twitter": true,
@@ -82,9 +82,9 @@
 
   // ensure links on API page are valid
   "api": {
-    "blockindex": 4000,
-    "blockhash": "000000007a015e6efd4bd24760c872ff50b6a867e067503ca2eb99b27cd1db56",
-    "txhash": "593aba2173fdfe169c1298d03849b7a82cfebdebc176de87c6fd552f1473b8b2",
+    "blockindex": 2500,
+    "blockhash": "a2805aa90788d76332097b7ec8c8538d7c201d186e332e3ec85f0952bf84949b",
+    "txhash": "54f50fac0a99711d15d9cf47eff3f9a49d8e03fe77fe3e05183b3ee3ac88c763",
     "address": "QSMSWV7Us6PB6hKueTzdNVN5nGysgC3bDd"
   },
 
@@ -92,7 +92,7 @@
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "LCC",
+    "coin": "RNG",
     "exchange": "BTC",
     "enabled": ["yobit"],
     "cryptopia_id": "1658",
@@ -116,15 +116,21 @@
     "high_flag": 5000
   },
 
+      // Peers page settings
+  // ipstack_api_key: ipstack.com Geo IP. This is the replacement of http://freegeoip.net You need an API Key for the Requests 
+  "peers": {
+    "ipstack_api_key": "24c44c2b76b8598baef1bfc2779dd271" 
+  },
+
   // twitter, facebook, googleplus, youtube
-  "twitter": "litecoincash",
+  "twitter": "ringcointech",
   "facebook": "yourfacebookpage",
   "googleplus": "yourgooglepluspage",
   "youtube": "youryoutubechannel",
 
   //genesis
-  "genesis_tx": "97ddfbbae6be97fd6cdf3e7ca13232a3afff2353e29badfab7f73011edd4ced9",
-  "genesis_block": "4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0",
+  "genesis_tx": "68a1b35cbd59f83b6e462281a703b58fdecb5e436cf82653720b55ea6852dc97",
+  "genesis_block": "b61b8461ebb55edad92a0f733df0734fb0b6593a6abe6d97b4fc1d24be46e416",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
@@ -150,7 +156,7 @@
 
   // nethash unitd: sets nethash API return units
   // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
-  "nethash_units": "G",
+  "nethash_units": "K",
 
   // Address labels
   // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
