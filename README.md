@@ -1,3 +1,5 @@
+Note: Make sure to change the default passwords for the DB and RPC settings once on your local enviroment.  
+
 Iquidus Explorer - 1.6.1
 ================
 
